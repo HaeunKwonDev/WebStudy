@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
         <style>
-            .idx_article{
+            .idx_main{
                 /*콘텐츠 중앙 정렬*/
                 display:flex; 
                 align-items: center;
@@ -26,21 +26,26 @@
 
     <body>
 
-        <h2 id="title"><a href="index.html" target="_self">Pikmin</a></h2>
-
         <div id="wrap">
-            <ol id="nvlist">
-                <li><a href="overview.html" target="_self">개요</a></li>
-                <li><a href="types.html" target="_self">종류</a></li> 
-                <li><a href="inbloom.html" target="_self">블룸에서</a></li>
-                <li><a href="sidenote.html" target="_self">사담</a></li>
-            </ol>
 
-            <div class="article idx_article">
+            <header>
+                <h2 id="title"><a href="index.html" target="_self">Pikmin</a></h2>
+            </header>
+
+            <nav>
+                <ol id="nvlist">
+                    <li><a href="overview.html" target="_self">개요</a></li>
+                    <li><a href="types.html" target="_self">종류</a></li> 
+                    <li><a href="inbloom.html" target="_self">블룸에서</a></li>
+                    <li><a href="sidenote.html" target="_self">사담</a></li>
+                </ol>
+            </nav>
+
+            <main class="idx_main">
                 어서오세용
                 <br><br>
                 피크민 관련 내용을 끄적여둔 사이트입니당
-            </div>
+            </main>
         </div>
 
     </body>

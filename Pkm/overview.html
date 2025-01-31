@@ -4,24 +4,40 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
+        <style>
+            #ovv-img{
+                width: 250px;
+            }
+
+            @media (max-width:767px){
+                #ovv-img{
+                    width: 40%;
+                }
+            }
+        </style>
     </head>
 
     <body>
 
-        <h2 id="title"><a href="index.html" target="_self">Pikmin</a></h2>
-
         <div id="wrap">
-            <ol id="nvlist">
-                <li><a href="overview.html" target="_self">개요</a></li>
-                <li><a href="types.html" target="_self">종류</a></li> 
-                <li><a href="inbloom.html" target="_self">블룸에서</a></li>
-                <li><a href="sidenote.html" target="_self">사담</a></li>
-            </ol>
+            
+            <header>
+                <h2 id="title"><a href="index.html" target="_self">Pikmin</a></h2>
+            </header>
 
-            <div class="article">
+            <nav>
+                <ol id="nvlist">
+                    <li><a href="overview.html" target="_self">개요</a></li>
+                    <li><a href="types.html" target="_self">종류</a></li> 
+                    <li><a href="inbloom.html" target="_self">블룸에서</a></li>
+                    <li><a href="sidenote.html" target="_self">사담</a></li>
+                </ol>
+            </nav>
+
+            <main>
                 <h3>개요</h3>
 
-                <img src="../images/pkm.jpg" width="20%">
+                <img src="../images/pkm.jpg" id="ovv-img">
 
                 <P>
                     행성 PNF-404에 사는 생물로, 최초의 발견자가 평소에 좋아하던 야채인 "피크피크당근"에서 따와 <strong>피크민</strong>으로 명명되었다.
@@ -49,7 +65,7 @@
                     식물의 특징을 가지고 있음에도 불구하고 물이 필요 없다. 오히려 특정 피크민을 제외한 피크민들은 물에 빠지면 사망한다,<br>
                     심지어 머리에 물을 맞으면 정신을 못 차리고 돌아다니다가 사망한다. 그래도 잠깐 비를 맞는 정도는 괜찮은 것으로 보인다.<br>
                 </P>
-            </div>
+            </main>
         </div>
 
     </body>
