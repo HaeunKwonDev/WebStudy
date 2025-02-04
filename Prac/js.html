@@ -22,11 +22,14 @@
         </ol>
 
         <input type="button" value="night" onclick="
+        if(this.value === 'night'){
             document.querySelector('body').style.backgroundColor = '#1f1f1f'
             document.querySelector('body').style.color = '#cccccc'
-        ">
-        <input type="button" value="day" onclick="
+            this.value = 'day'
+        }else{
             document.querySelector('body').style = 'none'
+            this.value = 'night'
+        }
         ">
 
         <div>
