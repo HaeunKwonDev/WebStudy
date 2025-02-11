@@ -8,6 +8,35 @@
                 color: #2667cb;
             }
         </style>
+
+        <script>            
+            function dayNightHandler(self){
+                var target = document.querySelector('body');
+                var alist = document.querySelectorAll('a'); //야간모드에 모든 a 태그 색상 바꾸기
+                if(self.value === 'night'){
+                    target.style.backgroundColor = '#1f1f1f'
+                    target.style.color = '#cccccc'
+                    self.value = 'day';
+
+                    var i = 0;
+                    while(i<alist.length){
+                        alist[i].style.color= '#92add6'
+                        i=i+1;
+                    }
+
+                } else {
+                    target.style.backgroundColor = 'white';
+                    target.style.color = 'black';
+                    self.value = 'night';
+
+                    var i = 0;
+                    while(i<alist.length){
+                        alist[i].style.color= '#2667cb'
+                        i=i+1;
+                    }
+                }
+            }
+        </script>
     </head>
 
     <body>
@@ -21,16 +50,8 @@
             <li><a href="sidenote.html" target="_self">사담</a></li>
         </ol>
 
-        <input type="button" value="night" onclick="
-        if(this.value === 'night'){
-            document.querySelector('body').style.backgroundColor = '#1f1f1f'
-            document.querySelector('body').style.color = '#cccccc'
-            this.value = 'day'
-        }else{
-            document.querySelector('body').style = 'none'
-            this.value = 'night'
-        }
-        ">
+        <input type="button" value="night" onclick="dayNightHandler(this);">
+        
 
         <div>
             <h3>개요</h3>
