@@ -9,33 +9,47 @@
             }
         </style>
 
-        <script>            
+        <script>
             function dayNightHandler(self){
                 var target = document.querySelector('body');
-                var alist = document.querySelectorAll('a'); //야간모드에 모든 a 태그 색상 바꾸기
                 if(self.value === 'night'){
-                    target.style.backgroundColor = '#1f1f1f'
-                    target.style.color = '#cccccc'
+                    //target.style.backgroundColor = '#1f1f1f'
+                    setBackColor('#1f1f1f');
+                    //target.style.color = '#cccccc'
+                    setFontColor('#cccccc')
                     self.value = 'day';
 
-                    var i = 0;
-                    while(i<alist.length){
-                        alist[i].style.color= '#92add6'
-                        i=i+1;
-                    }
+                    setLinksColor('#92add6');
 
                 } else {
-                    target.style.backgroundColor = 'white';
-                    target.style.color = 'black';
+                    // target.style.backgroundColor = 'white';
+                    setBackColor('white');
+                    //target.style.color = 'black';
+                    setFontColor('black');
                     self.value = 'night';
 
-                    var i = 0;
-                    while(i<alist.length){
-                        alist[i].style.color= '#2667cb'
-                        i=i+1;
-                    }
+                    setLinksColor('#2667cb');
+
                 }
             }
+
+            function setLinksColor(pColor) {
+                var alist = document.querySelectorAll('a'); //야간모드에 모든 a 태그 색상 바꾸기
+                var i = 0;
+                while(i<alist.length){
+                    alist[i].style.color= pColor;
+                    i=i+1;
+                }
+            }
+
+            function setBackColor(pColor) {
+                document.querySelector('body').style.backgroundColor = pColor;
+            }
+
+            function setFontColor(pColor) {
+                document.querySelector('body').style.color = pColor;
+            }
+
         </script>
     </head>
 
@@ -51,7 +65,6 @@
         </ol>
 
         <input type="button" value="night" onclick="dayNightHandler(this);">
-        
 
         <div>
             <h3>개요</h3>
