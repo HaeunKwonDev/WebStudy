@@ -20,21 +20,24 @@ function dayNightHandler(self){
 
 var Body = {
     setColor:function(pColor){
-        document.querySelector('body').style.color = pColor;
+        // document.querySelector('body').style.color = pColor;
+        $('body').css('color', pColor);
     },
     setBackColor:function(pColor){
-        document.querySelector('body').style.backgroundColor = pColor;
+        //document.querySelector('body').style.backgroundColor = pColor;
+        $('body').css('background-color',pColor);
     }
 
 }
 
 var Links = {
     setColor:function(pColor){
-        var alist = document.querySelectorAll('a'); //¾ß°£¸ðµå¿¡ ¸ðµç a ÅÂ±× »ö»ó ¹Ù²Ù±â
-        var i = 0;
-        while(i<alist.length){
-            alist[i].style.color= pColor;
-            i=i+1;
-        }
+        // var alist = document.querySelectorAll('a'); //ì•¼ê°„ëª¨ë“œì— ëª¨ë“  a íƒœê·¸ ìƒ‰ìƒ ë°”ê¾¸ê¸°
+        // var i = 0;
+        // while(i<alist.length){
+        //     alist[i].style.color= pColor;
+        //     i=i+1;
+        // }
+        $('a').css('color', pColor);
     },
 }
