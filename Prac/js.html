@@ -13,43 +13,42 @@
             function dayNightHandler(self){
                 var target = document.querySelector('body');
                 if(self.value === 'night'){
-                    //target.style.backgroundColor = '#1f1f1f'
-                    setBackColor('#1f1f1f');
-                    //target.style.color = '#cccccc'
-                    setFontColor('#cccccc')
+                    Body.setBackColor('#1f1f1f');
+                    Body.setColor('#cccccc')
                     self.value = 'day';
 
-                    setLinksColor('#92add6');
+                    Links.setColor('#92add6');
 
                 } else {
-                    // target.style.backgroundColor = 'white';
-                    setBackColor('white');
-                    //target.style.color = 'black';
-                    setFontColor('black');
+                    Body.setBackColor('white');
+                    Body.setColor('black');
                     self.value = 'night';
 
-                    setLinksColor('#2667cb');
+                    Links.setColor('#2667cb');
 
                 }
             }
 
-            function setLinksColor(pColor) {
-                var alist = document.querySelectorAll('a'); //야간모드에 모든 a 태그 색상 바꾸기
-                var i = 0;
-                while(i<alist.length){
-                    alist[i].style.color= pColor;
-                    i=i+1;
+            var Body = {
+                setColor:function(pColor){
+                    document.querySelector('body').style.color = pColor;
+                },
+                setBackColor:function(pColor){
+                    document.querySelector('body').style.backgroundColor = pColor;
                 }
+
             }
 
-            function setBackColor(pColor) {
-                document.querySelector('body').style.backgroundColor = pColor;
+            var Links = {
+                setColor:function(pColor){
+                    var alist = document.querySelectorAll('a'); //야간모드에 모든 a 태그 색상 바꾸기
+                    var i = 0;
+                    while(i<alist.length){
+                        alist[i].style.color= pColor;
+                        i=i+1;
+                    }
+                },
             }
-
-            function setFontColor(pColor) {
-                document.querySelector('body').style.color = pColor;
-            }
-
         </script>
     </head>
 
