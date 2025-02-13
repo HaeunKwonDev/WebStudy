@@ -16,6 +16,7 @@
 
             th{
                 background-color: aliceblue;
+                text-align: center;
             }
 
             #power_wrap{
@@ -44,8 +45,50 @@
                     width: 100%;
                 }
             }
-
         </style>
+        <script>
+            var seedlings = [
+                ['빨강 모종', '빨강 피크민','1,000 걸음'],
+                ['노랑 모종', '노랑 피크민','1,000 걸음'],
+                ['파랑 모종', '파랑 피크민','1,000 걸음'],
+                ['보라 모종', '보라 피크민','3,000 걸음'],
+                ['하양 모종', '하양 피크민','3,000 걸음'],
+                ['핑크 모종', '날개 피크민','5,000 걸음'],
+                ['회색 모종', '바위 피크민','5,000 걸음'],
+                ['큰 모종', '무작위(데코 피크민 부화)','10,000 걸음'],
+                ['금 모종', '무작위(데코 피크민 부화)','100 걸음']
+            ];
+            var powerType = [
+                ['빨강', '4', '빨강버섯 | 불버섯'],
+                ['노랑', '3', '노랑버섯 | 전기버섯'],
+                ['파랑', '3', '파랑버섯 | 물버섯'],
+                ['보라', '6', '보라버섯 | X'],
+                ['하양', '2', '하양버섯 | 독버섯'],
+                ['날개', '2', '핑크버섯 | X'],
+                ['바위', '5', '회색버섯 | 수정버섯']
+            ];
+            var powerMiljub = [
+                ['빨강하트 0', '0'],
+                ['빨강하트 1', '1'],
+                ['빨강하트 2', '2'],
+                ['빨강하트 3', '3'],
+                ['빨강하트 4', '4'],
+                ['골드하트 1', '8'],
+                ['골드하트 2', '12'],
+                ['골드하트 3', '16'],
+                ['골드하트 4', '20']
+            ];
+            var powerShape = [
+                ['대머리', '0'],
+                ['잎사귀', '1'],
+                ['봉우리', '2'],
+                ['일반 꽃', '3'],
+                ['계절(특수) 꽃', '4'],
+                ['이달의 꽃', '5'],
+                ['데코 없음', '0'],
+                ['데코 있음', '4']
+            ];
+        </script>
     </head>
 
     <body>
@@ -73,6 +116,7 @@
                         <p>
                             모종을 얻으면, 걸음 수를 채워서 피크민으로 부화시킬 수 있다.
                         </p>
+
                         <table border="1" width="400px">
                             <caption>부화에 필요한 걸음 수</caption>
                             <thead>
@@ -83,51 +127,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><!--빨강-->
-                                    <td>빨강 모종</td>
-                                    <td>빨강 피크민</td>
-                                    <td>1,000 걸음</td>
-                                </tr>
-                                <tr><!--노랑-->
-                                    <td>노랑 모종</td>
-                                    <td>노랑 피크민</td>
-                                    <td>1,000 걸음</td>
-                                </tr>
-                                <tr><!--파랑-->
-                                    <td>파랑 모종</td>
-                                    <td>파랑 피크민</td>
-                                    <td>1,000 걸음</td>
-                                </tr>
-                                <tr><!--보라-->
-                                    <td>보라 모종</td>
-                                    <td>보라 피크민</td>
-                                    <td>3,000 걸음</td>
-                                </tr>
-                                <tr><!--하양-->
-                                    <td>하양 모종</td>
-                                    <td>하양 피크민</td>
-                                    <td>3,000 걸음</td>
-                                </tr>
-                                <tr><!--날개-->
-                                    <td>핑크 모종</td>
-                                    <td>날개 피크민</td>
-                                    <td>5,000 걸음</td>
-                                </tr>
-                                <tr><!--바위-->
-                                    <td>회색 모종</td>
-                                    <td>바위 피크민</td>
-                                    <td>5,000 걸음</td>
-                                </tr>
-                                <tr><!--큰 모종-->
-                                    <td>큰 모종</td>
-                                    <td>무작위(데코 피크민 부화)</td>
-                                    <td>10,000 걸음</td>
-                                </tr>
-                                <tr><!--금 모종-->
-                                    <td>금 모종</td>
-                                    <td>무작위(데코 피크민 부화)</td>
-                                    <td>100 걸음</td>
-                                </tr>
+                                <script>
+                                    //배열 값 가져와서 칼럼 생성
+                                    for (var i in seedlings){
+                                        document.write('<tr>');
+        
+                                        for(var j in seedlings[i]){
+                                            document.write('<td>' + (seedlings[i][j]) + '</td>');
+                                        }
+        
+                                        document.write('</tr>');
+                                    }
+                                </script>
                             </tbody>
                         </table>
                     </li>
@@ -162,41 +173,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><!--빨강-->
-                                        <td>빨강</td>
-                                        <td>4</td>
-                                        <td>빨강버섯 | 불버섯</td>
-                                    </tr>
-                                    <tr><!--노랑-->
-                                        <td>노랑</td>
-                                        <td>3</td>
-                                        <td>노랑버섯 | 전기버섯</td>
-                                    </tr>
-                                    <tr><!--파랑-->
-                                        <td>파랑</td>
-                                        <td>3</td>
-                                        <td>파랑버섯 | 물버섯</td>
-                                    </tr>
-                                    <tr><!--보라-->
-                                        <td>보라</td>
-                                        <td>6</td>
-                                        <td>보라버섯 | X</td>
-                                    </tr>
-                                    <tr><!--하양-->
-                                        <td>하양</td>
-                                        <td>2</td>
-                                        <td>하양버섯 | 독버섯</td>
-                                    </tr>
-                                    <tr><!--날개-->
-                                        <td>날개</td>
-                                        <td>2</td>
-                                        <td>핑크버섯 | X</td>
-                                    </tr>
-                                    <tr><!--바위-->
-                                        <td>바위</td>
-                                        <td>5</td>
-                                        <td>회색버섯 | 수정버섯</td>
-                                    </tr>
+                                    <script>
+                                        //배열 값 가져와서 칼럼 생성
+                                        for (var i in powerType){
+                                            document.write('<tr>');
+            
+                                            for(var j in powerType[i]){
+                                                document.write('<td>' + (powerType[i][j]) + '</td>');
+                                            }
+            
+                                            document.write('</tr>');
+                                        }
+                                    </script>
                                 </tbody>
                             </table>
                             <table border="1" width="200px">
@@ -208,42 +196,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>빨강하트 0</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>빨강하트 1</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>빨강하트 2</td>
-                                        <td>2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>빨강하트 3</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>빨강하트 4</td>
-                                        <td>4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>골드하트 1</td>
-                                        <td>8</td>
-                                    </tr>
-                                    <tr>
-                                        <td>골드하트 2</td>
-                                        <td>12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>골드하트 3</td>
-                                        <td>16</td>
-                                    </tr>
-                                    <tr>
-                                        <td>골드하트 4</td>
-                                        <td>20</td>
-                                    </tr>
+                                    <script>
+                                        //배열 값 가져와서 칼럼 생성
+                                        for (var i in powerMiljub){
+                                            document.write('<tr>');
+            
+                                            for(var j in powerMiljub[i]){
+                                                document.write('<td>' + (powerMiljub[i][j]) + '</td>');
+                                            }
+            
+                                            document.write('</tr>');
+                                        }
+                                    </script>
                                 </tbody>
                             </table>
                             <table border="1" width="300px">
@@ -255,38 +219,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>대머리</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>잎사귀</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>봉우리</td>
-                                        <td>2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>일반 꽃</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>계절(특수) 꽃</td>
-                                        <td>4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>이달의 꽃</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>데코 없음</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>데코 있음</td>
-                                        <td>4</td>
-                                    </tr>
+                                    <script>
+                                        //배열 값 가져와서 칼럼 생성
+                                        for (var i in powerShape){
+                                            document.write('<tr>');
+            
+                                            for(var j in powerShape[i]){
+                                                document.write('<td>' + (powerShape[i][j]) + '</td>');
+                                            }
+            
+                                            document.write('</tr>');
+                                        }
+                                    </script>
                                 </tbody>
                             </table>
                         </div>
