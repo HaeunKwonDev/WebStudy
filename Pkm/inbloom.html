@@ -88,6 +88,19 @@
                 ['데코 없음', '0'],
                 ['데코 있음', '4']
             ];
+
+
+            function generateTableRows(arr) {
+                for (var i in arr){
+                    document.write('<tr>');
+
+                    for(var j in arr[i]){
+                        document.write('<td>' + (arr[i][j]) + '</td>');
+                    }
+
+                    document.write('</tr>');
+                }
+            }
         </script>
     </head>
 
@@ -128,16 +141,7 @@
                             </thead>
                             <tbody>
                                 <script>
-                                    //배열 값 가져와서 칼럼 생성
-                                    for (var i in seedlings){
-                                        document.write('<tr>');
-        
-                                        for(var j in seedlings[i]){
-                                            document.write('<td>' + (seedlings[i][j]) + '</td>');
-                                        }
-        
-                                        document.write('</tr>');
-                                    }
+                                    generateTableRows(seedlings);
                                 </script>
                             </tbody>
                         </table>
@@ -174,16 +178,7 @@
                                 </thead>
                                 <tbody>
                                     <script>
-                                        //배열 값 가져와서 칼럼 생성
-                                        for (var i in powerType){
-                                            document.write('<tr>');
-            
-                                            for(var j in powerType[i]){
-                                                document.write('<td>' + (powerType[i][j]) + '</td>');
-                                            }
-            
-                                            document.write('</tr>');
-                                        }
+                                        generateTableRows(powerType);
                                     </script>
                                 </tbody>
                             </table>
@@ -197,16 +192,7 @@
                                 </thead>
                                 <tbody>
                                     <script>
-                                        //배열 값 가져와서 칼럼 생성
-                                        for (var i in powerMiljub){
-                                            document.write('<tr>');
-            
-                                            for(var j in powerMiljub[i]){
-                                                document.write('<td>' + (powerMiljub[i][j]) + '</td>');
-                                            }
-            
-                                            document.write('</tr>');
-                                        }
+                                        generateTableRows(powerMiljub);
                                     </script>
                                 </tbody>
                             </table>
@@ -220,16 +206,7 @@
                                 </thead>
                                 <tbody>
                                     <script>
-                                        //배열 값 가져와서 칼럼 생성
-                                        for (var i in powerShape){
-                                            document.write('<tr>');
-            
-                                            for(var j in powerShape[i]){
-                                                document.write('<td>' + (powerShape[i][j]) + '</td>');
-                                            }
-            
-                                            document.write('</tr>');
-                                        }
+                                        generateTableRows(powerShape);
                                     </script>
                                 </tbody>
                             </table>
