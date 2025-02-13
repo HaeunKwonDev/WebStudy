@@ -31,14 +31,14 @@ img {
 }
 
 header{
-    border-bottom: 1px solid rgb(190, 190, 190);
+    border-bottom: 1px solid #bebebe;
     padding: 20px;
 
     grid-area: header; /*grid-area 이름 지정*/
 }
 
 nav{ 
-    border-right: 1px solid rgb(190, 190, 190);
+    border-right: 1px solid #bebebe;
 
     grid-area: nav; /*grid-area 이름 지정*/
 }
@@ -75,7 +75,7 @@ main li, p {
 @media (max-width:767px){
 
     header{
-        border-bottom: 1px solid rgb(190, 190, 190);
+        border-bottom: 1px solid #bebebe;
         padding: 20px;
     }
 
@@ -110,6 +110,6 @@ main li, p {
 
     #nvlist > li {
         padding: 0 20px 0 20px;
-        border-right: 1px solid rgb(190, 190, 190);
+        border-right: 1px solid #bebebe;
     }
 }

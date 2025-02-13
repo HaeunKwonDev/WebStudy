@@ -1,0 +1,24 @@
+header{
+    position:relative;
+}
+
+.toggle-theme {
+    position:absolute;
+    right: 20px; /*우측에서 20px*/
+    bottom: 10px; /*하단에서 10px*/
+
+    width: 35px;
+    height: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.day{
+    background:url("../images/night.svg") no-repeat;
+    background-position: center center;
+}
+
+.night{
+    background:url("../images/day.svg") no-repeat;
+    background-position: center center;
+}

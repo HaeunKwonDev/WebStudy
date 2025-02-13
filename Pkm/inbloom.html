@@ -4,9 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./theme.css">
+        <script src="./theme.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <style>
             table{
-                border: 2px solid rgb(190, 190, 190);
+                border: 2px solid #bebebe;
                 border-collapse: collapse;
             }
 
@@ -15,7 +18,7 @@
             }
 
             th{
-                background-color: aliceblue;
+                background-color: #768aad;
                 text-align: center;
             }
 
@@ -24,7 +27,7 @@
                 grid-template-columns: 10fr 7fr 10fr;
                 place-items: center;
 
-            }
+            }            
 
             @media (max-width:1100px){
                 #power_wrap{
@@ -110,6 +113,8 @@
 
             <header>
                 <h2 id="title"><a href="index.html" target="_self">Pikmin</a></h2>
+
+                <button class="toggle-theme day" onclick="themeHandler(this);"></button>
             </header>
 
             <nav>
